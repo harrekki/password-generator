@@ -1,0 +1,14 @@
+@use "../util/" as u;
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: u.rem(550);
+    height: u.rem(550);
+    padding: u.rem(115) u.rem(52);
+    flex-shrink: 0;
+}
