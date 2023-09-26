@@ -6,9 +6,17 @@ body {
     align-items: center;
 }
 
+header {
+    padding-bottom: u.em(50);
+}
+
 .container {
-    width: u.rem(550);
-    height: u.rem(550);
-    padding: u.rem(115) u.rem(52);
+    width: u.em(550);
+    height: u.em(550);
+    padding: u.em(115) u.em(52);
     flex-shrink: 0;
+}
+
+.block {
+    display: block;
 }

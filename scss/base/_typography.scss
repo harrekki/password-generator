@@ -1,0 +1,23 @@
+@use "../util/" as u;
+
+h1, h2, h3 {
+    font-family: var(--karla-font);
+    font-weight: 800;
+    letter-spacing: -2px;
+    font-size: u.rem(40);
+    line-height: 100%;
+    color: var(--black)
+}
+
+.green-text {
+    color: var(--accent-color);
+}
+
+.header--subtitle {
+    color: var(--text-color);
+    font-size: u.rem(20);
+    line-height: 140%;
+    font-weight: 400;
+    margin-top: u.rem(10);
+    
+}
