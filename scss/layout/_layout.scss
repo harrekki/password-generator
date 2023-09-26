@@ -23,6 +23,7 @@ header {
 
 .passwords--container {
     display: flex;
+    gap: u.rem(25);
     margin-top: u.rem(35);
     border-top: 1px solid var(--hr-color);
     padding: u.rem(35) 0;
