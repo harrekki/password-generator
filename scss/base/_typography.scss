@@ -9,6 +9,11 @@ h1, h2, h3 {
     color: var(--black)
 }
 
+footer {
+    font-size: u.rem(12);
+    color: var(--text-color);
+}
+
 .green-text {
     color: var(--accent-color);
 }

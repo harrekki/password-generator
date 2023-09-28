@@ -10,10 +10,14 @@ header {
     padding-bottom: u.em(50);
 }
 
+footer {
+    margin-top: u.rem(25);
+}
+
 .container {
-    width: u.em(550);
-    height: u.em(550);
-    padding: u.em(115) u.em(52);
+    width: u.em(700);
+    height: u.em(700);
+    padding: u.em(90) u.em(52) u.em(45);
     flex-shrink: 0;
 }
 
@@ -21,8 +25,13 @@ header {
     display: block;
 }
 
+.passwords--inputs {
+    padding-bottom: u.em(35);
+}
+
 .passwords--container {
     display: flex;
+    flex-wrap: wrap;
     gap: u.rem(25);
     margin-top: u.rem(35);
     border-top: 1px solid var(--hr-color);

@@ -13,7 +13,7 @@ function generatePasswords() {
     if(passwordsArr) passwordsArr.length = 0;
     const passwdLength = 16;
     const arr = letters.concat(numbers, symbols);
-    const numOfPasswds = 2;
+    const numOfPasswds = 4;
     
     for(let j = 0; j < numOfPasswds; j++) {
         let password = "";
