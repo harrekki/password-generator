@@ -13,7 +13,7 @@ function generatePasswords() {
     for(let j = 0; j < numOfPasswds; j++) {
         let password = "";
         for(let i = 0; i < passwdLength; i++) {
-            const randomIndex = Math.floor(Math.random() * arr.length - 1)
+            const randomIndex = Math.floor(Math.random() * arr.length);
             password += arr[randomIndex];
         }
         passwordsArr.push(password);
