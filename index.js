@@ -3,13 +3,18 @@ const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/",];
 
 const pwBtn = document.getElementById("pw-btn");
+const pwCon = document.getElementById("pw-con");
+const passwordsArr = [];
+
+pwBtn.addEventListener("click", generatePasswords);
+pwBtn.addEventListener("click", displayPasswords);
 
 function generatePasswords() {
+    if(passwordsArr) passwordsArr.length = 0;
     const passwdLength = 16;
     const arr = letters.concat(numbers, symbols);
     const numOfPasswds = 2;
-    let passwordsArr = [];
-
+    
     for(let j = 0; j < numOfPasswds; j++) {
         let password = "";
         for(let i = 0; i < passwdLength; i++) {
@@ -18,8 +23,15 @@ function generatePasswords() {
         }
         passwordsArr.push(password);
     }
-
-    console.log(passwordsArr);
 }
 
-pwBtn.addEventListener("click", generatePasswords);
+function displayPasswords() {
+    const passwdFields = pwCon.children;
+    for(let i = 0; i < passwordsArr.length; i++) {
+        passwdFields[i].textContent = passwordsArr[i];
+    }
+}
+    
+
+
+
