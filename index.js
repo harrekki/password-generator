@@ -4,15 +4,29 @@ const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","="
 
 const pwBtn = document.getElementById("pw-btn");
 const pwCon = document.getElementById("pw-con");
+const pwLength = document.getElementById("pw-length");
+const pwNumbers = document.getElementById("pw-numbers");
+const pwSymbols = document.getElementById("pw-symbols");
+const pwDuplicates = document.getElementById("pw-duplicates");
 const passwordsArr = [];
 
 pwBtn.addEventListener("click", generatePasswords);
 pwBtn.addEventListener("click", displayPasswords);
 
 function generatePasswords() {
-    if(passwordsArr) passwordsArr.length = 0;
-    const passwdLength = 16;
-    const arr = letters.concat(numbers, symbols);
+    if(passwordsArr) {
+        passwordsArr.length = 0;
+    }
+    const passwdLength = pwLength.value;
+    // Determine if numbers and/or symbols are included
+    let arr = letters;
+    if(pwNumbers.checked) {
+        arr = arr.concat(numbers);
+    }
+    if(pwSymbols.checked) {
+        arr = arr.concat(symbols);
+    }
+    
     const numOfPasswds = 4;
     
     for(let j = 0; j < numOfPasswds; j++) {

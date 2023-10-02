@@ -16,8 +16,8 @@
     align-self: center;
 }
 
-.option input[type="checkbox"]:focus {
-    outline: 1px solid rgba(0, 0, 0, 0.2);
+.option input:focus {
+    outline: 2px solid hsla(251, 18%, 19%, 0.50);
 }
 
 .option input[type="checkbox"] {
@@ -41,5 +41,5 @@
     padding: u.rem(3) u.rem(10);
     border: none;
     background-color: #DDD;
-    
+    border-radius: 4px;
 }
