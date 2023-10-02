@@ -1,0 +1,45 @@
+@use "../util/" as u;
+
+.option {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    color: var(--black);
+    font-size: u.rem(16);
+    margin-bottom: 0.5rem;
+}
+
+.option label {
+    align-self: end;
+}
+
+.option input {
+    align-self: center;
+}
+
+.option input[type="checkbox"]:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.option input[type="checkbox"] {
+    background-color: #DDD;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: u.rem(16);
+    height: u.rem(16);
+    cursor: pointer;
+}
+
+.option input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+    background: var(--accent-color) url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
+}
+
+#pw-length {
+    width: 20%;
+    padding: u.rem(3) u.rem(10);
+    border: none;
+    background-color: #DDD;
+    
+}
