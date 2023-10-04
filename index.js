@@ -9,6 +9,8 @@ const pwNumbers = document.getElementById("pw-numbers");
 const pwSymbols = document.getElementById("pw-symbols");
 const pwDuplicates = document.getElementById("pw-duplicates");
 const passwordOutputs = document.querySelectorAll(".passwords--output");
+const modal = document.getElementById("modal");
+
 const passwordsArr = [];
 
 pwBtn.addEventListener("click", generatePasswords);
@@ -16,6 +18,9 @@ pwBtn.addEventListener("click", displayPasswords);
 passwordOutputs.forEach(elem => {
     elem.addEventListener("click", copyToClipboard);
 });
+window.addEventListener("click", function(event) {
+        modal.style.display = "none";
+})
 
 function generatePasswords() {
     if(passwordsArr) {
@@ -69,13 +74,17 @@ async function copyToClipboard(event) {
     try {
         if(text) {
             await navigator.clipboard.writeText(text);
-            console.log("Copied!")
+            displayModal();
+            console.log("Copied!");
         }
     } catch (error) {
         console.error("Failed to copy: ", error);
     }
 }
-    
+
+function displayModal() {
+    modal.style.display = "block";
+}    
 
 
 

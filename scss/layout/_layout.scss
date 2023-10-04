@@ -14,9 +14,13 @@ footer {
     margin-top: u.rem(25);
 }
 
+main {
+    position: relative;
+}
+
 .container {
     width: u.em(700);
-    height: u.em(700);
+    height: u.em(750);
     padding: u.em(90) u.em(52) u.em(45);
     flex-shrink: 0;
 }

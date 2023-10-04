@@ -1,0 +1,23 @@
+@use "../util/" as u;
+
+.modal {
+    // display: none;
+    position: absolute;
+    z-index: 1;
+    bottom: u.em(150);
+    right: u.em(210);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--white);
+    width: u.em(175); 
+    padding: u.em(25) u.em(10);
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    animation-name: slideIn;
+    animation-duration: 400ms;
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 150px; opacity: 1}
+}
