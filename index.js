@@ -8,10 +8,14 @@ const pwLength = document.getElementById("pw-length");
 const pwNumbers = document.getElementById("pw-numbers");
 const pwSymbols = document.getElementById("pw-symbols");
 const pwDuplicates = document.getElementById("pw-duplicates");
+const passwordOutputs = document.querySelectorAll(".passwords--output");
 const passwordsArr = [];
 
 pwBtn.addEventListener("click", generatePasswords);
 pwBtn.addEventListener("click", displayPasswords);
+passwordOutputs.forEach(elem => {
+    elem.addEventListener("click", copyToClipboard);
+});
 
 function generatePasswords() {
     if(passwordsArr) {
@@ -52,6 +56,23 @@ function displayPasswords() {
     const passwdFields = pwCon.children;
     for(let i = 0; i < passwordsArr.length; i++) {
         passwdFields[i].textContent = passwordsArr[i];
+    }
+}
+
+async function copyToClipboard(event) {
+    if(!navigator.clipboard) {
+        // Clipboard API not available
+        return
+    }
+
+    const text = event.target.innerText;
+    try {
+        if(text) {
+            await navigator.clipboard.writeText(text);
+            console.log("Copied!")
+        }
+    } catch (error) {
+        console.error("Failed to copy: ", error);
     }
 }
     
