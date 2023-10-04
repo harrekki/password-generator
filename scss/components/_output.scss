@@ -1,11 +1,37 @@
 .passwords--output {
     width: 285px;
-    height: 39px;
+    height: 40px;
     background-color: var(--field-color);
     color: #5DEF92;
     text-align: center;
     font-weight: 500;
-    line-height: 200%;
-    padding: 4px;
+    line-height: 150%;
+    padding: 5px;
+    border: 3px solid var(--field-color);
     border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: all ease-in-out 150ms;
 }
+
+.passwords--output:hover {
+    border: 3px solid var(--accent-color);
+    background-color: hsl(161, 79%, 16%);
+}
+
+.passwords--output::after {
+    display: none;
+    content: "copy";
+    position: absolute;
+    top: -23px;
+    right: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.passwords--output:hover::after {
+    display: inline;
+}
+
