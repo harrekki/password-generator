@@ -3,7 +3,7 @@
 .option {
     display: grid;
     grid-template-columns: 40% 60%;
-    color: var(--black);
+    color: var(--option-text-color);
     font-size: u.rem(16);
     margin-bottom: 0.5rem;
 }
@@ -21,7 +21,7 @@
 }
 
 .option input[type="checkbox"] {
-    background-color: #DDD;
+    background-color: var(--bg-input-color);
     border-radius: 2px;
     appearance: none;
     -webkit-appearance: none;
@@ -43,6 +43,6 @@
     width: 20%;
     padding: u.rem(3) u.rem(10);
     border: none;
-    background-color: #DDD;
+    background-color: var(--bg-input-color);
     border-radius: 4px;
 }
