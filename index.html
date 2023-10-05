@@ -15,13 +15,20 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="header--title">Generate a <span class="green-text block">random password</span></h1>
-            <h5 class="header--subtitle">Never use an insecure password again.</h5>
+            <h1 class="header--title">
+                Generate a 
+                <span class="green-text block">random password</span>
+            </h1>
+            <h5 class="header--subtitle">
+                Never use an insecure password again.
+            </h5>
         </header>
         <main class="passwords">
             <div class="passwords--inputs">
                 <div class="option">
-                    <label for="pw-length">Password length:</label>
+                    <label for="pw-length">
+                        Password length:
+                    </label>
                     <input 
                         type="number" 
                         min="8" 
@@ -32,7 +39,9 @@
                     />
                 </div>
                 <div class="option">
-                    <label for="pw-numbers">Include numbers: </label>
+                    <label for="pw-numbers">
+                        Include numbers: 
+                    </label>
                     <input 
                         type="checkbox" 
                         checked
@@ -42,7 +51,9 @@
                     />
                 </div>
                 <div class="option">
-                    <label for="pw-symbols">Include symbols:</label>
+                    <label for="pw-symbols">
+                        Include symbols:
+                    </label>
                     <input 
                         type="checkbox" 
                         checked 
@@ -50,9 +61,12 @@
                         id="pw-symbols"
                         class="checkbox"
                     />
+                    
                 </div>
                 <div class="option">
-                    <label for="pw-duplicates">No duplicate characers: </label>
+                    <label for="pw-duplicates">
+                        No duplicate characers: 
+                    </label>
                     <input 
                         type="checkbox" 
                         name="pw-duplicates" 
@@ -62,7 +76,9 @@
                 </div>
 
             </div>
-            <button class="generate-btn" id="pw-btn">Generate passwords</button>
+            <button class="generate-btn" id="pw-btn">
+                Generate passwords
+            </button>
             <div class="passwords--container" id="pw-con">
                 <div class="passwords--output"></div>
                 <p class="passwords--output"></p>
@@ -75,7 +91,11 @@
             </div> 
         </main>
         <footer>
-            <p class="copywrite">Made with 💚 | &copy; 2023 David LaRocco</p>
+            <p class="copywrite">Made with 💚 by 
+                <a href="https://www.davidlarocco.dev" target="_blank">
+                    David LaRocco
+                </a>
+            </p>
         </footer>
     </div>
 </body>
