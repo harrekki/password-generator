@@ -18,7 +18,7 @@ pwBtn.addEventListener("click", displayPasswords);
 passwordOutputs.forEach(elem => {
     elem.addEventListener("click", copyToClipboard);
 });
-window.addEventListener("click", function(event) {
+window.addEventListener("click", function() {
         modal.style.display = "none";
 })
 
@@ -45,7 +45,6 @@ function generatePasswords() {
             if(pwDuplicates.checked){
                 // while password has a value equal to arr[randomIndex]
                 while(password.includes(arr[randomIndex])) {
-                    //generate a new random number for randomIndex
                     randomIndex = Math.floor(Math.random() * arr.length);
                 }
             }
