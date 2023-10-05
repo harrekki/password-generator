@@ -9,6 +9,8 @@ const pwNumbers = document.getElementById("pw-numbers");
 const pwSymbols = document.getElementById("pw-symbols");
 const pwDuplicates = document.getElementById("pw-duplicates");
 const passwordOutputs = document.querySelectorAll(".passwords--output");
+const body = document.body;
+const themeBtn = document.getElementById("theme-btn")
 const modal = document.getElementById("modal");
 
 const passwordsArr = [];
@@ -18,9 +20,10 @@ pwBtn.addEventListener("click", displayPasswords);
 passwordOutputs.forEach(elem => {
     elem.addEventListener("click", copyToClipboard);
 });
+themeBtn.addEventListener("click", toggleTheme);
 window.addEventListener("click", function() {
         modal.style.display = "none";
-})
+});
 
 function generatePasswords() {
     if(passwordsArr) {
@@ -85,5 +88,7 @@ function displayModal() {
     modal.style.display = "block";
 }    
 
-
+function toggleTheme() {
+    body.classList.toggle("dark-theme");
+}
 
