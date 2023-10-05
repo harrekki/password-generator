@@ -13,14 +13,14 @@
         background-color ease-in-out 75ms,
         color ease-in-out 75ms;
     cursor: pointer;
-}
 
-.generate-btn:hover {
-    box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.5);
-    transform: translateY(-0.25em);
-}
+    &:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.5);
+        transform: translateY(-0.25em);
+    }
 
-.generate-btn:active {
-    background-color: hsl(160, 47%, 44%);
-    color: hsla(0, 0%, 100%, 0.733);
+    &:active {
+        background-color: hsl(160, 47%, 44%);
+        color: hsla(0, 0%, 100%, 0.733);
+    }
 }

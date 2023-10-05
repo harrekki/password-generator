@@ -29,11 +29,14 @@
     width: u.rem(16);
     height: u.rem(16);
     cursor: pointer;
-}
 
-.option input[type="checkbox"]:checked {
-    background-color: var(--accent-color);
-    background: var(--accent-color) url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
+    &:checked {
+        background-color: var(--accent-color);
+        background: 
+            var(--accent-color) 
+            url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 
+            3px 3px no-repeat;
+    }
 }
 
 #pw-length {

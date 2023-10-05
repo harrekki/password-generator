@@ -12,26 +12,27 @@
     cursor: pointer;
     position: relative;
     transition: all ease-in-out 150ms;
-}
 
-.passwords--output:hover {
-    border: 3px solid var(--accent-color);
-    background-color: hsl(161, 79%, 16%);
-}
-
-.passwords--output::after {
-    display: none;
-    content: "copy";
-    position: absolute;
-    top: -23px;
-    right: 0;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--accent-color);
-    letter-spacing: 1px;
-}
-
-.passwords--output:hover::after {
-    display: inline;
+    
+    &::after {
+        display: none;
+        content: "copy";
+        position: absolute;
+        top: -23px;
+        right: 0;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--accent-color);
+        letter-spacing: 1px;
+    }
+    
+    &:hover {
+        border: 3px solid var(--accent-color);
+        background-color: hsl(161, 79%, 16%);
+    
+        &::after {
+            display: inline;
+        }
+    }
 }
 

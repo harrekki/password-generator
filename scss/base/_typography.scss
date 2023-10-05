@@ -18,11 +18,11 @@ a {
     text-decoration: none;
     color: var(--accent-color);
     font-weight: 500;
-}
 
-a:hover {
-    text-decoration: underline;
-    color: var(--text-color);
+    &:hover {
+        text-decoration: underline;
+        color: var(--text-color);
+    }
 }
 
 .green-text {
