@@ -15,7 +15,7 @@
     cursor: pointer;
 
     &:hover {
-        box-shadow: 0 0.5em 0.5em -0.4em rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0.5em 0.5em -0.4em var(--btn-shadow-color);
         transform: translateY(-0.25em);
     }
 
@@ -37,9 +37,15 @@
     padding: 5px;
     transform: rotate(180deg);
     cursor: pointer;
-    transition: all ease-in-out 150ms;
+    transition: 
+        transform ease-in-out 150ms, 
+        color ease-in 100ms;
 
     &:hover {
         transform: none;
+    }
+
+    &:active {
+        color: var(--accent-color);
     }
 }

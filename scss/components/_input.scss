@@ -14,10 +14,10 @@
 
 .option input {
     align-self: center;
-}
 
-.option input:focus {
-    outline: 2px solid hsla(251, 18%, 19%, 0.50);
+    &:focus {
+        outline: 2px solid var(--focus-color);
+    }
 }
 
 .option input[type="checkbox"] {
