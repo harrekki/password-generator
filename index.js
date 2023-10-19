@@ -86,6 +86,9 @@ async function copyToClipboard(event) {
 
 function displayModal() {
     modal.style.display = "block";
+    setTimeout(() => {
+        modal.style.display = "none"
+    }, 3000);
 }    
 
 function toggleTheme() {
